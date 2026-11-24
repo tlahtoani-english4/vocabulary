@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Spelling Bee | Colegio Tlahtoani</title>
+<meta name="description" content="Palabras del Spelling Bee de Lead Book 1 y 2 con definición en español y ejemplos en inglés y español.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--morado:#4B2A8C;--morado-oscuro:#2E1A5E;--verde:#7CB342;--verde-oscuro:#3E6B16;--verde-claro:#E4F0CF;--sol:#F6C945;--azul:#1F4E8C;--rojo:#E04B3F;--crema:#FBF8F1;--texto:#2B2350;--suave:#5B5478;--borde:#E4DEF2}
+*{margin:0;padding:0;box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',Arial,sans-serif;background:var(--crema);color:var(--texto);line-height:1.5;overflow-x:hidden}
+h1,h2,h3{font-family:'Nunito',Arial,sans-serif;font-weight:800;line-height:1.15}
+.wrap{max-width:1180px;margin:0 auto;padding:0 max(1.25rem,env(safe-area-inset-left)) 0 max(1.25rem,env(safe-area-inset-right))}
+:focus-visible{outline:3px solid var(--sol);outline-offset:2px}
+
+header.hero{background:linear-gradient(135deg,var(--morado-oscuro),var(--morado));color:#fff;padding:1.6rem 0 4.2rem;position:relative;overflow:hidden}
+header.hero::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:rgba(246,201,69,.14);right:-120px;top:-150px}
+header.hero::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(124,179,66,.2);left:-80px;bottom:-90px}
+.brand{display:flex;align-items:center;gap:.8rem;position:relative;z-index:2}
+.brand .logo{width:60px;height:60px;border-radius:50%;background:#fff;padding:5px;flex-shrink:0}
+.brand .logo img{width:100%;height:100%;object-fit:contain}
+.brand b{font-family:'Nunito',sans-serif;font-weight:800;font-size:1.1rem;display:block;line-height:1.1}
+.brand small{color:#D8D0F0;font-size:.78rem;letter-spacing:.05em}
+.hero-txt{position:relative;z-index:2;margin-top:2rem;max-width:720px}
+.tag{display:inline-block;background:rgba(255,255,255,.14);color:var(--sol);font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:.4rem 1rem;border-radius:999px;margin-bottom:1rem}
+.hero-txt h1{color:#fff;font-size:clamp(2rem,6vw,3.4rem);margin-bottom:.8rem}
+.hero-txt h1 em{font-style:normal;color:var(--sol)}
+.hero-txt p{color:#E6E0F5;font-size:1.1rem}
+.stats{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem;position:relative;z-index:2}
+.stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:.55rem 1rem;font-weight:700;font-size:.95rem}
+.stat b{color:var(--sol);font-family:'Nunito',sans-serif;font-size:1.2rem;margin-right:.3rem}
+
+.panel{margin-top:-2.4rem;position:relative;z-index:5}
+.panel-box{background:#fff;border:2px solid var(--borde);border-radius:22px;padding:1.2rem;box-shadow:0 12px 32px rgba(46,26,94,.12);display:grid;gap:1rem}
+.row{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center}
+.lbl{font-family:'Nunito',sans-serif;font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--suave);min-width:74px}
+.chip{font-family:'Nunito',sans-serif;font-weight:800;font-size:.95rem;cursor:pointer;background:#fff;color:var(--texto);border:2px solid var(--borde);border-radius:999px;padding:.4rem 1.05rem;min-height:42px;transition:.2s}
+.chip:hover{border-color:var(--verde)}
+.chip.on{background:var(--morado);border-color:var(--morado);color:#fff}
+.chip.l1.on{background:var(--verde);border-color:var(--verde);color:#1B2B0B}
+.chip.l2.on{background:var(--sol);border-color:var(--sol);color:var(--morado-oscuro)}
+.chip.l3.on{background:var(--azul);border-color:var(--azul)}
+.chip.l4.on{background:var(--rojo);border-color:var(--rojo)}
+.search{flex:1;min-width:200px;position:relative}
+.search input{width:100%;min-height:46px;border:2px solid var(--borde);border-radius:999px;padding:.55rem 1.1rem .55rem 2.6rem;font:inherit;font-size:1rem;color:var(--texto);background:#fff}
+.search input:focus{outline:none;border-color:var(--morado)}
+.search svg{position:absolute;left:.9rem;top:50%;transform:translateY(-50%);width:20px;height:20px;stroke:var(--suave)}
+.btn{font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;cursor:pointer;border:0;border-radius:999px;min-height:46px;padding:.6rem 1.3rem;display:inline-flex;align-items:center;gap:.5rem;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-verde{background:var(--verde);color:#1B2B0B;box-shadow:0 6px 14px rgba(124,179,66,.35)}
+.btn-morado{background:var(--morado);color:#fff}
+.btn-claro{background:var(--verde-claro);color:var(--verde-oscuro)}
+.switch{display:inline-flex;align-items:center;gap:.6rem;cursor:pointer;font-weight:700;user-select:none}
+.switch input{position:absolute;opacity:0}
+.switch .track{width:48px;height:28px;border-radius:999px;background:#CFC7E4;position:relative;transition:.2s;flex-shrink:0}
+.switch .track::after{content:"";position:absolute;width:22px;height:22px;border-radius:50%;background:#fff;top:3px;left:3px;transition:.2s;box-shadow:0 2px 4px rgba(0,0,0,.2)}
+.switch input:checked+.track{background:var(--verde)}
+.switch input:checked+.track::after{left:23px}
+.switch input:focus-visible+.track{outline:3px solid var(--sol);outline-offset:2px}
+
+.count{margin:1.6rem 0 1rem;font-weight:700;color:var(--suave)}
+.count b{color:var(--morado);font-family:'Nunito',sans-serif;font-size:1.15rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem;padding-bottom:3rem}
+.card{background:#fff;border:2px solid var(--borde);border-radius:20px;overflow:hidden;box-shadow:0 8px 22px rgba(46,26,94,.08);display:flex;flex-direction:column}
+.card .top{display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.55rem 1rem;font-family:'Nunito',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.card.l1 .top{background:var(--verde);color:#1B2B0B}
+.card.l2 .top{background:var(--sol);color:var(--morado-oscuro)}
+.card.l3 .top{background:var(--azul);color:#fff}
+.card.l4 .top{background:var(--rojo);color:#fff}
+.card .body{padding:1rem 1.1rem 1.2rem;display:grid;gap:.75rem}
+.wordrow{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.word{font-family:'Nunito',sans-serif;font-weight:800;font-size:1.9rem;color:var(--morado-oscuro);overflow-wrap:anywhere}
+.spk{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:0;background:var(--verde-claro);color:var(--verde-oscuro);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+.spk:hover{background:var(--verde);color:#1B2B0B}
+.spk svg{width:22px;height:22px;fill:currentColor}
+.def{font-family:'Nunito',sans-serif;font-weight:800;font-size:1.1rem;color:var(--morado)}
+.ex{border-radius:14px;padding:.7rem .9rem;font-size:.97rem}
+.ex.en{background:#F3EEFB}
+.ex.es{background:#FFF7DB}
+.ex small{display:block;font-family:'Nunito',sans-serif;font-weight:800;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.15rem;color:var(--suave)}
+.ex .enrow{display:flex;gap:.6rem;align-items:flex-start;justify-content:space-between}
+.ex .spk{width:36px;height:36px}
+.ex .spk svg{width:18px;height:18px}
+.hide .reveal-me{display:none}
+.hide .card .tap{display:flex}
+.tap{display:none;align-items:center;justify-content:center;gap:.4rem;background:var(--verde-claro);color:var(--verde-oscuro);border:2px dashed var(--verde);border-radius:14px;min-height:46px;font-family:'Nunito',sans-serif;font-weight:800;cursor:pointer;width:100%;font-size:1rem}
+.hide .card.open .reveal-me{display:block}
+.hide .card.open .tap{display:none}
+.vacio{text-align:center;color:var(--suave);padding:2rem 0 4rem}
+
+.modal{position:fixed;inset:0;background:rgba(30,15,60,.7);z-index:100;display:none;align-items:center;justify-content:center;padding:1rem}
+.modal.on{display:flex}
+.mbox{background:#fff;border-radius:26px;max-width:480px;width:100%;padding:1.6rem;text-align:center;position:relative;max-height:92vh;overflow:auto}
+.mbox h2{font-size:1.5rem;color:var(--morado-oscuro);margin-bottom:.3rem}
+.mbox p.sub{color:var(--suave);margin-bottom:1rem}
+.mx{position:absolute;right:.8rem;top:.8rem;width:42px;height:42px;border-radius:50%;border:0;background:#F3EEFB;color:var(--morado);font-size:1.4rem;cursor:pointer}
+.prog{height:10px;border-radius:99px;background:var(--borde);overflow:hidden;margin:.6rem 0 1.2rem}
+.prog i{display:block;height:100%;width:0;background:var(--verde);transition:.3s}
+.bigspk{width:96px;height:96px;margin:0 auto 1rem;border-radius:50%;border:0;background:var(--morado);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.bigspk svg{width:44px;height:44px;fill:currentColor}
+.hint{font-weight:800;font-family:'Nunito',sans-serif;color:var(--morado);font-size:1.15rem;margin-bottom:.8rem}
+.ans{width:100%;min-height:54px;border:3px solid var(--borde);border-radius:16px;font:inherit;font-size:1.5rem;text-align:center;padding:.4rem;margin-bottom:.8rem;text-transform:lowercase}
+.ans:focus{outline:none;border-color:var(--morado)}
+.fb{min-height:2.6rem;font-family:'Nunito',sans-serif;font-weight:800;font-size:1.1rem;margin-bottom:.6rem}
+.fb.ok{color:var(--verde-oscuro)}.fb.no{color:var(--rojo)}
+.mbtns{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.final{font-family:'Nunito',sans-serif;font-weight:800;font-size:3rem;color:var(--morado)}
+
+footer{background:var(--morado-oscuro);color:#D8D0F0;padding:2rem 0 calc(2rem + env(safe-area-inset-bottom));text-align:center;font-size:.92rem}
+footer a{color:var(--sol)}
+@media (max-width:560px){.lbl{min-width:100%}.word{font-size:1.7rem}.panel-box{padding:1rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="wrap">
+  <div class="brand">
+   <span class="logo"><img src="logo-tlahtoani.png" alt="Logo Colegio Tlahtoani"></span>
+   <span><b>Colegio Tlahtoani</b><small>4TH GRADE ENGLISH</small></span>
+  </div>
+  <div class="hero-txt">
+   <span class="tag">Spelling Bee · 8 de diciembre</span>
+   <h1>Palabras del <em>Spelling Bee</em></h1>
+   <p>Lead Book 1 y Lead Book 2, lecciones 1 a 4. Cada palabra con su significado en español y un ejemplo en inglés y en español.</p>
+  </div>
+  <div class="stats">
+   <div class="stat"><b>112</b>palabras</div>
+   <div class="stat"><b>2</b>libros</div>
+   <div class="stat"><b>8</b>lecciones</div>
+  </div>
+ </div>
+</header>
+
+<main class="wrap">
+ <section class="panel" aria-label="Filtros">
+  <div class="panel-box">
+   <div class="row"><span class="lbl">Libro</span>
+    <button class="chip on" data-book="0">Todos</button>
+    <button class="chip" data-book="1">Lead Book 1</button>
+    <button class="chip" data-book="2">Lead Book 2</button>
+   </div>
+   <div class="row"><span class="lbl">Lección</span>
+    <button class="chip on" data-les="0">Todas</button>
+    <button class="chip l1" data-les="1">Lesson 1</button>
+    <button class="chip l2" data-les="2">Lesson 2</button>
+    <button class="chip l3" data-les="3">Lesson 3</button>
+    <button class="chip l4" data-les="4">Lesson 4</button>
+   </div>
+   <div class="row">
+    <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+     <input id="q" type="search" placeholder="Buscar palabra o significado…" aria-label="Buscar palabra o significado"></label>
+   </div>
+   <div class="row" style="justify-content:space-between">
+    <label class="switch"><input type="checkbox" id="prac"><span class="track"></span><span>Modo estudio (ocultar significado)</span></label>
+    <button class="btn btn-verde" id="startQuiz">🎧 Practicar deletreo</button>
+   </div>
+  </div>
+ </section>
+
+ <p class="count" id="count"></p>
+ <div class="grid" id="grid"></div>
+ <p class="vacio" id="vacio" hidden>No encontramos palabras con ese filtro.</p>
+</main>
+
+<footer><div class="wrap">Colegio Tlahtoani GDL · 4th Grade English · Lead Book 1 y 2 · Lessons 1–4<br><a href="https://colegiotlahtoani.com/">Ir al sitio del colegio</a></div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+ <div class="mbox">
+  <button class="mx" id="mclose" aria-label="Cerrar">×</button>
+  <div id="qplay">
+   <h2 id="mt">Practicar deletreo</h2>
+   <p class="sub" id="qsub"></p>
+   <div class="prog"><i id="qbar"></i></div>
+   <button class="bigspk" id="qsay" aria-label="Escuchar palabra"><svg viewBox="0 0 24 24"><path d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+   <div class="hint" id="qhint"></div>
+   <input class="ans" id="qans" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Escribe la palabra">
+   <div class="fb" id="qfb" aria-live="polite"></div>
+   <div class="mbtns"><button class="btn btn-morado" id="qcheck">Revisar</button><button class="btn btn-claro" id="qnext" hidden>Siguiente</button></div>
+  </div>
+  <div id="qend" hidden>
+   <h2>¡Terminaste!</h2>
+   <p class="sub">Tu resultado</p>
+   <div class="final" id="qscore"></div>
+   <p class="sub" id="qmiss" style="margin-top:.6rem"></p>
+   <div class="mbtns" style="margin-top:1rem"><button class="btn btn-verde" id="qagain">Otra ronda</button><button class="btn btn-claro" id="qclose2">Cerrar</button></div>
+  </div>
+ </div>
+</div>
+
+<script>
+/* [libro, lección, palabra, significado, ejemplo EN, ejemplo ES] */
+const W = [
+[
+1,
+1,
+"stories",
+"historias",
+"My grandma tells me funny stories before bed.",
+"Mi abuela me cuenta historias divertidas antes de dormir."
+],
+[
+1,
+1,
+"knights",
+"caballeros",
+"The knights rode their horses to the castle.",
+"Los caballeros montaron sus caballos hasta el castillo."
+],
+[
+1,
+1,
+"stripes",
+"rayas",
+"The zebra has black and white stripes.",
+"La cebra tiene rayas blancas y negras."
+],
+[
+1,
+1,
+"countryside",
+"campo / zona rural",
+"We visit my uncle in the countryside every summer.",
+"Visitamos a mi tío en el campo cada verano."
+],
+[
+1,
+1,
+"mysterious",
+"misterioso(a)",
+"The mysterious box was hidden under the bed.",
+"La caja misteriosa estaba escondida debajo de la cama."
+],
+[
+1,
+1,
+"quiet",
+"silencioso, tranquilo",
+"Please be quiet in the library.",
+"Por favor, guarda silencio en la biblioteca."
+],
+[
+1,
+1,
+"kilts",
+"kilts (faldas escocesas)",
+"The men in Scotland wear kilts at the festival.",
+"Los hombres en Escocia usan kilts en el festival."
+],
+[
+1,
+1,
+"plaid",
+"de cuadros (escocés)",
+"He wore a red plaid shirt to school.",
+"Él usó una camisa roja de cuadros a la escuela."
+],
+[
+1,
+1,
+"castle",
+"castillo",
+"The king lives in a big castle.",
+"El rey vive en un castillo grande."
+],
+[
+1,
+1,
+"official",
+"oficial",
+"The principal made an official announcement.",
+"La directora hizo un anuncio oficial."
+],
+[
+1,
+1,
+"guards",
+"guardias",
+"The guards stand outside the palace gate.",
+"Los guardias están afuera de la puerta del palacio."
+],
+[
+1,
+1,
+"siblings",
+"hermanos(as)",
+"I have two siblings: a brother and a sister.",
+"Tengo dos hermanos: un hermano y una hermana."
+],
+[
+1,
+1,
+"capital",
+"capital",
+"Mexico City is the capital of Mexico.",
+"La Ciudad de México es la capital de México."
+],
+[
+1,
+1,
+"look after",
+"cuidar de",
+"I look after my little brother after school.",
+"Cuido a mi hermanito después de la escuela."
+],
+[
+1,
+2,
+"languages",
+"idiomas",
+"My teacher speaks three languages.",
+"Mi maestra habla tres idiomas."
+],
+[
+1,
+2,
+"accent",
+"acento",
+"She has a British accent.",
+"Ella tiene acento británico."
+],
+[
+1,
+2,
+"environment",
+"medio ambiente",
+"We should protect the environment.",
+"Debemos proteger el medio ambiente."
+],
+[
+1,
+2,
+"patterns",
+"patrones, diseños",
+"The blanket has colorful patterns.",
+"La cobija tiene patrones coloridos."
+],
+[
+1,
+2,
+"everyday",
+"diario, cotidiano",
+"I wear my everyday shoes to school.",
+"Uso mis zapatos de diario para ir a la escuela."
+],
+[
+1,
+2,
+"classics",
+"clásicos",
+"We read some classics in our book club.",
+"Leemos algunos clásicos en nuestro club de lectura."
+],
+[
+1,
+2,
+"nonfiction",
+"no ficción",
+"I like nonfiction books about animals.",
+"Me gustan los libros de no ficción sobre animales."
+],
+[
+1,
+2,
+"compare",
+"comparar",
+"Let's compare the two pictures.",
+"Vamos a comparar las dos imágenes."
+],
+[
+1,
+2,
+"distinct",
+"distinto, único",
+"Each bird has a distinct song.",
+"Cada pájaro tiene un canto distinto."
+],
+[
+1,
+2,
+"tricky",
+"difícil, complicado",
+"This spelling word is tricky.",
+"Esta palabra de ortografía es complicada."
+],
+[
+1,
+2,
+"borrowed",
+"prestado (de borrow)",
+"I borrowed a pencil from my friend.",
+"Le pedí prestado un lápiz a mi amigo."
+],
+[
+1,
+2,
+"pronunciation",
+"pronunciación",
+"Practice your pronunciation every day.",
+"Practica tu pronunciación todos los días."
+],
+[
+1,
+2,
+"arrived",
+"llegó (de arrive)",
+"The bus arrived at eight o'clock.",
+"El autobús llegó a las ocho en punto."
+],
+[
+1,
+2,
+"independence",
+"independencia",
+"Mexico celebrates its independence in September.",
+"México celebra su independencia en septiembre."
+],
+[
+1,
+3,
+"wool",
+"lana",
+"My sweater is made of wool.",
+"Mi suéter está hecho de lana."
+],
+[
+1,
+3,
+"calf",
+"becerro",
+"The calf stayed close to its mother.",
+"El becerro se quedó cerca de su mamá."
+],
+[
+1,
+3,
+"herd",
+"manada, rebaño",
+"A herd of cows ate grass in the field.",
+"Una manada de vacas comía pasto en el campo."
+],
+[
+1,
+3,
+"waterproof",
+"impermeable",
+"My jacket is waterproof, so I stay dry in the rain.",
+"Mi chamarra es impermeable, así que me mantengo seco bajo la lluvia."
+],
+[
+1,
+3,
+"trained",
+"entrenó (de train)",
+"She trained her dog to sit.",
+"Ella entrenó a su perro para sentarse."
+],
+[
+1,
+3,
+"hiding",
+"escondiéndose",
+"The cat is hiding under the table.",
+"El gato se está escondiendo debajo de la mesa."
+],
+[
+1,
+3,
+"shaggy",
+"peludo, desaliñado",
+"The shaggy dog needs a bath.",
+"El perro peludo necesita un baño."
+],
+[
+1,
+3,
+"shepherd",
+"pastor",
+"The shepherd takes care of the sheep.",
+"El pastor cuida de las ovejas."
+],
+[
+1,
+3,
+"tiny",
+"diminuto, pequeñito",
+"A tiny ant walked on the leaf.",
+"Una hormiga diminuta caminaba sobre la hoja."
+],
+[
+1,
+3,
+"loyal",
+"leal",
+"Dogs are loyal friends.",
+"Los perros son amigos leales."
+],
+[
+1,
+3,
+"unusual",
+"inusual, raro",
+"It is unusual to see snow in Guadalajara.",
+"Es raro ver nieve en Guadalajara."
+],
+[
+1,
+3,
+"gentle",
+"gentil, suave",
+"Be gentle with the baby rabbit.",
+"Sé gentil con el conejito bebé."
+],
+[
+1,
+3,
+"wolves",
+"lobos",
+"The wolves howled at the moon.",
+"Los lobos aullaron a la luna."
+],
+[
+1,
+3,
+"fierce",
+"feroz",
+"The lion is a fierce animal.",
+"El león es un animal feroz."
+],
+[
+1,
+4,
+"uncover",
+"descubrir, destapar",
+"Scientists uncover new facts about space.",
+"Los científicos descubren datos nuevos sobre el espacio."
+],
+[
+1,
+4,
+"tapestry",
+"tapiz",
+"A beautiful tapestry hangs on the wall.",
+"Un hermoso tapiz cuelga en la pared."
+],
+[
+1,
+4,
+"stage",
+"escenario",
+"The students sing on the stage.",
+"Los estudiantes cantan en el escenario."
+],
+[
+1,
+4,
+"musician",
+"músico(a)",
+"My cousin is a talented musician.",
+"Mi primo es un músico talentoso."
+],
+[
+1,
+4,
+"journey",
+"viaje",
+"Our journey to the beach was long.",
+"Nuestro viaje a la playa fue largo."
+],
+[
+1,
+4,
+"marvelous",
+"maravilloso(a)",
+"We had a marvelous day at the park.",
+"Tuvimos un día maravilloso en el parque."
+],
+[
+1,
+4,
+"glowed",
+"brilló (de glow)",
+"The moon glowed in the dark sky.",
+"La luna brilló en el cielo oscuro."
+],
+[
+1,
+4,
+"set off",
+"salir, ponerse en camino",
+"We set off early in the morning.",
+"Salimos temprano por la mañana."
+],
+[
+1,
+4,
+"daring",
+"atrevido(a), valiente",
+"The daring explorer climbed the mountain.",
+"El explorador atrevido escaló la montaña."
+],
+[
+1,
+4,
+"cozy",
+"acogedor, calientito",
+"The cabin is warm and cozy.",
+"La cabaña es cálida y acogedora."
+],
+[
+1,
+4,
+"harp",
+"arpa",
+"She plays the harp at the concert.",
+"Ella toca el arpa en el concierto."
+],
+[
+1,
+4,
+"grin",
+"sonrisa amplia",
+"He had a big grin on his face.",
+"Él tenía una sonrisa amplia en la cara."
+],
+[
+1,
+4,
+"sunset",
+"atardecer, puesta de sol",
+"We watched the sunset at the beach.",
+"Vimos el atardecer en la playa."
+],
+[
+1,
+4,
+"choir",
+"coro",
+"The school choir sings at the festival.",
+"El coro de la escuela canta en el festival."
+],
+[
+2,
+1,
+"obstacle",
+"obstáculo",
+"The runner jumped over the obstacle.",
+"El corredor saltó el obstáculo."
+],
+[
+2,
+1,
+"speed",
+"velocidad",
+"The car drove at high speed.",
+"El carro iba a gran velocidad."
+],
+[
+2,
+1,
+"concentration",
+"concentración",
+"Math needs a lot of concentration.",
+"Las matemáticas necesitan mucha concentración."
+],
+[
+2,
+1,
+"path",
+"camino, sendero",
+"We walked along a path in the forest.",
+"Caminamos por un sendero en el bosque."
+],
+[
+2,
+1,
+"instructor",
+"instructor(a)",
+"The swimming instructor taught us to float.",
+"La instructora de natación nos enseñó a flotar."
+],
+[
+2,
+1,
+"worldwide",
+"en todo el mundo",
+"Soccer is popular worldwide.",
+"El futbol es popular en todo el mundo."
+],
+[
+2,
+1,
+"safety",
+"seguridad",
+"Wear a helmet for your safety.",
+"Usa un casco por tu seguridad."
+],
+[
+2,
+1,
+"forward",
+"hacia adelante",
+"Take two steps forward.",
+"Da dos pasos hacia adelante."
+],
+[
+2,
+1,
+"behave",
+"portarse bien",
+"Please behave well in class.",
+"Por favor, pórtate bien en clase."
+],
+[
+2,
+1,
+"course",
+"curso",
+"I am taking a drawing course.",
+"Estoy tomando un curso de dibujo."
+],
+[
+2,
+1,
+"movement",
+"movimiento",
+"The dance has a lot of movement.",
+"El baile tiene mucho movimiento."
+],
+[
+2,
+1,
+"accurate",
+"preciso(a), exacto(a)",
+"The clock is accurate.",
+"El reloj es exacto."
+],
+[
+2,
+1,
+"ethical",
+"ético(a)",
+"It is ethical to tell the truth.",
+"Es ético decir la verdad."
+],
+[
+2,
+1,
+"courageous",
+"valiente",
+"The courageous girl saved the puppy.",
+"La niña valiente salvó al cachorro."
+],
+[
+2,
+2,
+"mushrooms",
+"hongos, champiñones",
+"We put mushrooms on the pizza.",
+"Pusimos champiñones en la pizza."
+],
+[
+2,
+2,
+"savory",
+"salado, sabroso",
+"I prefer savory snacks to sweet ones.",
+"Prefiero las botanas saladas a las dulces."
+],
+[
+2,
+2,
+"imaginary",
+"imaginario(a)",
+"He has an imaginary friend named Max.",
+"Él tiene un amigo imaginario llamado Max."
+],
+[
+2,
+2,
+"eggplant",
+"berenjena",
+"My mom cooked eggplant for dinner.",
+"Mi mamá cocinó berenjena para la cena."
+],
+[
+2,
+2,
+"delightful",
+"encantador(a)",
+"We had a delightful picnic.",
+"Tuvimos un picnic encantador."
+],
+[
+2,
+2,
+"spinach",
+"espinacas",
+"Spinach is a healthy green vegetable.",
+"Las espinacas son una verdura verde y saludable."
+],
+[
+2,
+2,
+"pastry",
+"pastel, repostería",
+"The bakery sells fresh pastry every morning.",
+"La panadería vende repostería fresca cada mañana."
+],
+[
+2,
+2,
+"underneath",
+"debajo de",
+"The ball is underneath the chair.",
+"La pelota está debajo de la silla."
+],
+[
+2,
+2,
+"custard",
+"natilla, flan",
+"We had custard for dessert.",
+"Comimos flan de postre."
+],
+[
+2,
+2,
+"layers",
+"capas",
+"The cake has three layers.",
+"El pastel tiene tres capas."
+],
+[
+2,
+2,
+"sauce",
+"salsa",
+"I like tomato sauce on my pasta.",
+"Me gusta la salsa de tomate en mi pasta."
+],
+[
+2,
+2,
+"deceived",
+"engañado(a)",
+"The fox deceived the crow in the story.",
+"El zorro engañó al cuervo en el cuento."
+],
+[
+2,
+2,
+"appetite",
+"apetito",
+"I have a big appetite after soccer.",
+"Tengo mucho apetito después del futbol."
+],
+[
+2,
+2,
+"zucchini",
+"calabacita",
+"Zucchini is green and long.",
+"La calabacita es verde y larga."
+],
+[
+2,
+3,
+"sore",
+"adolorido(a)",
+"My legs are sore after the race.",
+"Mis piernas están adoloridas después de la carrera."
+],
+[
+2,
+3,
+"plenty",
+"mucho(s), bastante",
+"We have plenty of time to finish.",
+"Tenemos bastante tiempo para terminar."
+],
+[
+2,
+3,
+"encourage",
+"animar, alentar",
+"Friends encourage each other to try again.",
+"Los amigos se animan unos a otros a intentarlo de nuevo."
+],
+[
+2,
+3,
+"coach",
+"entrenador(a)",
+"Our coach teaches us to play soccer.",
+"Nuestro entrenador nos enseña a jugar futbol."
+],
+[
+2,
+3,
+"flexible",
+"flexible",
+"Gymnasts are very flexible.",
+"Los gimnastas son muy flexibles."
+],
+[
+2,
+3,
+"servants",
+"sirvientes",
+"The servants cleaned the royal palace.",
+"Los sirvientes limpiaron el palacio real."
+],
+[
+2,
+3,
+"perseverance",
+"perseverancia",
+"With perseverance, you can reach your goals.",
+"Con perseverancia, puedes alcanzar tus metas."
+],
+[
+2,
+3,
+"tough",
+"duro(a), resistente",
+"These boots are tough and last a long time.",
+"Estas botas son resistentes y duran mucho tiempo."
+],
+[
+2,
+3,
+"avoid",
+"evitar",
+"Avoid running in the hallway.",
+"Evita correr en el pasillo."
+],
+[
+2,
+3,
+"teammate",
+"compañero(a) de equipo",
+"My teammate passed me the ball.",
+"Mi compañero de equipo me pasó el balón."
+],
+[
+2,
+3,
+"tired",
+"cansado(a)",
+"I am tired after the long trip.",
+"Estoy cansado después del viaje largo."
+],
+[
+2,
+3,
+"caring",
+"cariñoso(a), atento(a)",
+"My teacher is kind and caring.",
+"Mi maestra es amable y cariñosa."
+],
+[
+2,
+3,
+"trust",
+"confianza, confiar",
+"I trust my best friend.",
+"Confío en mi mejor amigo."
+],
+[
+2,
+3,
+"communicate",
+"comunicarse",
+"We communicate with our friends by phone.",
+"Nos comunicamos con nuestros amigos por teléfono."
+],
+[
+2,
+4,
+"matter",
+"importar, asunto",
+"Your opinion matters to us.",
+"Tu opinión nos importa."
+],
+[
+2,
+4,
+"throw away",
+"tirar, desechar",
+"Do not throw away paper; recycle it.",
+"No tires el papel; recíclalo."
+],
+[
+2,
+4,
+"fade",
+"desteñirse",
+"My shirt will fade if I wash it in hot water.",
+"Mi camisa se desteñirá si la lavo con agua caliente."
+],
+[
+2,
+4,
+"popular",
+"popular",
+"That song is very popular.",
+"Esa canción es muy popular."
+],
+[
+2,
+4,
+"quickly",
+"rápidamente",
+"She ate her lunch quickly.",
+"Ella comió su almuerzo rápidamente."
+],
+[
+2,
+4,
+"trends",
+"tendencias",
+"Fashion trends change every year.",
+"Las tendencias de moda cambian cada año."
+],
+[
+2,
+4,
+"fashion",
+"moda",
+"My sister loves fashion and design.",
+"Mi hermana ama la moda y el diseño."
+],
+[
+2,
+4,
+"reuse",
+"reutilizar",
+"We reuse glass jars for crafts.",
+"Reutilizamos frascos de vidrio para manualidades."
+],
+[
+2,
+4,
+"comfortable",
+"cómodo(a)",
+"This chair is very comfortable.",
+"Esta silla es muy cómoda."
+],
+[
+2,
+4,
+"outfit",
+"atuendo, conjunto",
+"I picked a new outfit for the party.",
+"Elegí un atuendo nuevo para la fiesta."
+],
+[
+2,
+4,
+"style",
+"estilo",
+"I like your style.",
+"Me gusta tu estilo."
+],
+[
+2,
+4,
+"rip",
+"rasgar, romper",
+"Be careful not to rip the paper.",
+"Ten cuidado de no romper el papel."
+],
+[
+2,
+4,
+"search",
+"buscar, búsqueda",
+"I search for information on the internet.",
+"Busco información en internet."
+],
+[
+2,
+4,
+"handmade",
+"hecho(a) a mano",
+"This bracelet is handmade.",
+"Esta pulsera está hecha a mano."
+]
+];
+
+const $ = s => document.querySelector(s);
+const grid = $('#grid'), count = $('#count'), vacio = $('#vacio');
+let book = 0, les = 0, q = '';
+const ICON = '<svg viewBox="0 0 24 24"><path d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+/* Voz en inglés */
+let voice = null;
+function pickVoice(){
+  if(!('speechSynthesis' in window)) return;
+  const v = speechSynthesis.getVoices().filter(x => /^en/i.test(x.lang));
+  voice = v.find(x => /en-US/i.test(x.lang) && /(samantha|google|natural|aria|jenny)/i.test(x.name)) || v.find(x => /en-US/i.test(x.lang)) || v[0] || null;
+}
+if('speechSynthesis' in window){ pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function say(text, rate){
+  if(!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US'; if(voice) u.voice = voice; u.rate = rate || .9;
+  speechSynthesis.speak(u);
+}
+
+function filtered(){
+  const nq = norm(q.trim());
+  return W.map((w, i) => ({b:w[0], l:w[1], w:w[2], d:w[3], en:w[4], es:w[5], n:i}))
+    .filter(x => (!book || x.b === book) && (!les || x.l === les) &&
+      (!nq || norm(x.w).includes(nq) || norm(x.d).includes(nq)));
+}
+
+function render(){
+  const list = filtered();
+  const hide = $('#prac').checked;
+  document.body.classList.toggle('hide', hide);
+  grid.innerHTML = list.map(x => `
+   <article class="card l${x.l}">
+    <div class="top"><span>Lead Book ${x.b} · Lesson ${x.l}</span><span>#${(x.n % 56) + 1}</span></div>
+    <div class="body">
+     <div class="wordrow"><h3 class="word">${esc(x.w)}</h3>
+      <button class="spk" data-say="${esc(x.w)}" aria-label="Escuchar ${esc(x.w)}">${ICON}</button></div>
+     <button class="tap" type="button">👀 Toca para ver el significado</button>
+     <div class="reveal-me def">${esc(x.d)}</div>
+     <div class="reveal-me ex en"><small>Example</small>
+      <div class="enrow"><span>${esc(x.en)}</span>
+       <button class="spk" data-say="${esc(x.en)}" aria-label="Escuchar el ejemplo">${ICON}</button></div></div>
+     <div class="reveal-me ex es"><small>Ejemplo</small>${esc(x.es)}</div>
+    </div>
+   </article>`).join('');
+  count.innerHTML = `Mostrando <b>${list.length}</b> ${list.length === 1 ? 'palabra' : 'palabras'}`;
+  vacio.hidden = list.length > 0;
+}
+
+grid.addEventListener('click', e => {
+  const s = e.target.closest('.spk');
+  if(s){ say(s.dataset.say); return; }
+  const t = e.target.closest('.tap');
+  if(t){ t.closest('.card').classList.add('open'); }
+});
+document.querySelectorAll('[data-book]').forEach(b => b.addEventListener('click', () => {
+  book = +b.dataset.book;
+  document.querySelectorAll('[data-book]').forEach(x => x.classList.toggle('on', x === b)); render();
+}));
+document.querySelectorAll('[data-les]').forEach(b => b.addEventListener('click', () => {
+  les = +b.dataset.les;
+  document.querySelectorAll('[data-les]').forEach(x => x.classList.toggle('on', x === b)); render();
+}));
+$('#q').addEventListener('input', e => { q = e.target.value; render(); });
+$('#prac').addEventListener('change', render);
+
+/* Práctica de deletreo */
+let deck = [], idx = 0, score = 0, missed = [], answered = false;
+const modal = $('#modal');
+function shuffle(a){ for(let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function startQuiz(){
+  const list = filtered();
+  if(!list.length) return;
+  deck = shuffle(list.slice()).slice(0, 10);
+  idx = 0; score = 0; missed = [];
+  $('#qplay').hidden = false; $('#qend').hidden = true;
+  $('#qsub').textContent = `${deck.length} palabras · escucha y escribe`;
+  modal.classList.add('on');
+  nextQ();
+}
+function nextQ(){
+  answered = false;
+  const x = deck[idx];
+  $('#qbar').style.width = (idx / deck.length * 100) + '%';
+  $('#qhint').textContent = `Pista: ${x.d}`;
+  $('#qans').value = ''; $('#qans').disabled = false;
+  $('#qfb').textContent = ''; $('#qfb').className = 'fb';
+  $('#qcheck').hidden = false; $('#qnext').hidden = true;
+  $('#qans').focus();
+  setTimeout(() => say(x.w, .8), 250);
+}
+function check(){
+  if(answered) return;
+  const x = deck[idx];
+  const a = $('#qans').value.trim().toLowerCase();
+  if(!a) return;
+  answered = true;
+  const ok = a === x.w.toLowerCase();
+  if(ok){ score++; $('#qfb').textContent = '✅ ¡Correcto!'; $('#qfb').className = 'fb ok'; }
+  else { missed.push(x.w); $('#qfb').textContent = `❌ Se escribe: ${x.w}`; $('#qfb').className = 'fb no'; }
+  $('#qans').disabled = true;
+  $('#qcheck').hidden = true; $('#qnext').hidden = false; $('#qnext').focus();
+  $('#qnext').textContent = idx === deck.length - 1 ? 'Ver resultado' : 'Siguiente';
+}
+function advance(){
+  idx++;
+  if(idx >= deck.length){
+    $('#qplay').hidden = true; $('#qend').hidden = false;
+    $('#qscore').textContent = `${score} / ${deck.length}`;
+    $('#qmiss').textContent = missed.length ? 'Para repasar: ' + missed.join(', ') : '¡Perfecto! 🌟';
+  } else nextQ();
+}
+function closeQ(){ modal.classList.remove('on'); if('speechSynthesis' in window) speechSynthesis.cancel(); }
+$('#startQuiz').addEventListener('click', startQuiz);
+$('#qsay').addEventListener('click', () => say(deck[idx].w, .8));
+$('#qcheck').addEventListener('click', check);
+$('#qnext').addEventListener('click', advance);
+$('#qagain').addEventListener('click', startQuiz);
+$('#mclose').addEventListener('click', closeQ);
+$('#qclose2').addEventListener('click', closeQ);
+$('#qans').addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); check(); } });
+modal.addEventListener('keydown', e => { if(e.key === 'Enter' && answered){ e.preventDefault(); advance(); } if(e.key === 'Escape') closeQ(); });
+modal.addEventListener('click', e => { if(e.target === modal) closeQ(); });
+
+render();
+</script>
+</body>
+</html>
